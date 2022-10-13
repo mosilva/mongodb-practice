@@ -5,12 +5,6 @@ namespace TrailMongoDb
 {
     public class AcessMongoDbForClass
     {
-        static void Main(string[] args)
-        {
-            Task T = MainClassAsync(args);
-            Console.WriteLine("Pressione ENTER");
-            Console.ReadKey();
-        }
 
         static async Task MainClassAsync(string[] args)
         {
