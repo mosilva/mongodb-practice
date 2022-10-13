@@ -1,6 +1,7 @@
 ﻿using MongoDB.Driver;
+using TrailMongoDb.Entities;
 
-namespace TrailMongoDb
+namespace TrailMongoDb.Infra
 {
     public class ConnectionMongoDb
     {

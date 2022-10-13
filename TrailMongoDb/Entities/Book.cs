@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace TrailMongoDb
+namespace TrailMongoDb.Entities
 {
     public class Book
     {
@@ -27,7 +27,7 @@ namespace TrailMongoDb
             book.NumberOfPages = numberOfPages;
             string[] vetGenres = genre.Split(',');
             List<string> vetGenres2 = new List<string>();
-            for(int i = 0; i < vetGenres.Length; i++)
+            for (int i = 0; i < vetGenres.Length; i++)
             {
                 vetGenres2.Add(vetGenres[i].Trim());
             }

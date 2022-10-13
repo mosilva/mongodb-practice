@@ -1,7 +1,8 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using TrailMongoDb.Entities;
 
-namespace TrailMongoDb
+namespace TrailMongoDb.Create
 {
     public class AcessMongoDbForClass
     {
@@ -21,7 +22,7 @@ namespace TrailMongoDb
                 "Drama"
             };
 
-            book.Genre = genres; 
+            book.Genre = genres;
 
 
             //Acess to Server

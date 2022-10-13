@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson;
 
-namespace TrailMongoDb
+namespace TrailMongoDb.Create
 {
     class Program
     {
@@ -23,7 +23,7 @@ namespace TrailMongoDb
                 {"title", "Game of Thrones" }
             };
             doc.Add("writer", "George R R Martin");
-            doc.Add("yearRelease",1999);
+            doc.Add("yearRelease", 1999);
             doc.Add("numberOfPages", 856);
 
             var genre = new BsonArray();

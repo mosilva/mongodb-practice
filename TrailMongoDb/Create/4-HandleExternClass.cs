@@ -1,4 +1,7 @@
-﻿namespace TrailMongoDb
+﻿using TrailMongoDb.Entities;
+using TrailMongoDb.Infra;
+
+namespace TrailMongoDb.Create
 {
     public class HandleExternClass
     {
@@ -34,16 +37,14 @@
 
             #endregion
 
-            List<Book> books = new List<Book>();
+            List<Book> books = new List<Book>();   
 
             books.Add(BookValues.inputBookValues("The Iliad", "Homer", 1991, 835, "Poetry, Epic"));
-            books.Add(BookValues.inputBookValues(" Art of War", "Sun Tzu",1990, 160, "Treated, Non - fiction"));
-
-            //Acess to Connection Class
+            books.Add(BookValues.inputBookValues(" Art of War", "Sun Tzu", 1990, 160, "Treated, Non - fiction"));
 
             var conn = new ConnectionMongoDb();
-;            
-            await conn.Books.InsertManyAsync(books); 
+
+            await conn.Books.InsertManyAsync(books);
 
             Console.WriteLine("Docs include");
 

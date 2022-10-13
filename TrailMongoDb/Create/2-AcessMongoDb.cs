@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 
-namespace TrailMongoDb
+namespace TrailMongoDb.Create
 {
     public class AcessMongoDb
     {
