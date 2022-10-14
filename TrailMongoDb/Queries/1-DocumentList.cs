@@ -5,7 +5,7 @@ using TrailMongoDb.Infra;
 
 namespace TrailMongoDb.Queries
 {
-    public class ListDocuments
+    public class DocumentList
     {
         static void Main(string[] args)
         {

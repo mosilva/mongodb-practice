@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TrailMongoDb.Queries.ListDocuments</StartupObject>
+    <StartupObject>TrailMongoDb.Queries.DocumentListOrderBy</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
