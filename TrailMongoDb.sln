@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrailMongoDb", "TrailMongoDb\TrailMongoDb.csproj", "{E39AEA3A-5829-403B-8CFA-481E66A6D37E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrailMongoDb", "TrailMongoDb\TrailMongoDb.csproj", "{E39AEA3A-5829-403B-8CFA-481E66A6D37E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "projetoBlog", "ProjetoBlog_V2_Por_OK\projetoBlog\projetoBlog.csproj", "{3744773E-8DB5-4828-96F0-5072FD248343}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E39AEA3A-5829-403B-8CFA-481E66A6D37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E39AEA3A-5829-403B-8CFA-481E66A6D37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E39AEA3A-5829-403B-8CFA-481E66A6D37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3744773E-8DB5-4828-96F0-5072FD248343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3744773E-8DB5-4828-96F0-5072FD248343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3744773E-8DB5-4828-96F0-5072FD248343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3744773E-8DB5-4828-96F0-5072FD248343}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
