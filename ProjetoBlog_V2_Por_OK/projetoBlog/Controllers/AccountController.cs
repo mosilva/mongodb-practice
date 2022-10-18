@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
+﻿using MongoDB.Driver;
+using projetoBlog.Models;
+using projetoBlog.Models.Account;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using projetoBlog.Models;
-using projetoBlog.Models.Account;
+using System.Security.Claims;
 
 namespace projetoBlog.Controllers
 {
@@ -31,28 +29,31 @@ namespace projetoBlog.Controllers
             {
                 return View(model);
             }
+            var connectandoMongoDb = new AcessoMongoDB();
 
-            // XXXX TRABALHE AQUI
-            // Neste ponto iremos buscar o email digitado ao acessar o Blog
-            // Descomentar as linhas abaixo
+            var constructor = Builders<Usuario>.Filter;
 
-            //if (user == null)
-            //{
-            //    ModelState.AddModelError("Email", "Correio não foi registrado.");
-            //    return View(model);
-            //}
+            var conditional = constructor.Eq(x => x.Email, model.Email);
 
-            //var identity = new ClaimsIdentity(new[]
-            //    {
-            //        new Claim(ClaimTypes.Name, user.Nome),
-            //        new Claim(ClaimTypes.Email, user.Email)
-            //    },
-            //    "ApplicationCookie");
+            var user = await connectandoMongoDb.Users.Find(conditional).SingleOrDefaultAsync();
 
-            //var context = Request.GetOwinContext();
-            //var authManager = context.Authentication;
+            if (user == null)
+            {
+                ModelState.AddModelError("Email", "Correio não foi registrado.");
+                return View(model);
+            }
 
-            //authManager.SignIn(identity);
+            var identity = new ClaimsIdentity(new[]
+                {
+                    new Claim(ClaimTypes.Name, user.Nome),
+                    new Claim(ClaimTypes.Email, user.Email)
+                },
+                "ApplicationCookie");
+
+            var context = Request.GetOwinContext();
+            var authManager = context.Authentication;
+
+            authManager.SignIn(identity);
 
             return Redirect(GetRedirectUrl(model.RetornoUrl));
         }
