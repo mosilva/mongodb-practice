@@ -1,7 +1,9 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace projetoBlog.Models
 {
@@ -9,6 +11,7 @@ namespace projetoBlog.Models
     {
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+
         public string Autor { get; set; }
 
         public string Titulo { get; set; }
@@ -20,18 +23,5 @@ namespace projetoBlog.Models
         public DateTime DataCriacao { get; set; }
 
         public List<Comentario> Comentarios { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
